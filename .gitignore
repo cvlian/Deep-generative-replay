@@ -1,6 +1,4 @@
 dataset/test_32x32.mat
 dataset/train_32x32.mat
-dataset/mnistm_data.pkl
-dataset/usps.h5
 .ipynb_checkpoints/*
 backup*.ipynb

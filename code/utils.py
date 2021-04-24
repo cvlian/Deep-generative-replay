@@ -37,6 +37,12 @@ def load_data(mat_file):
     global datapath
     
     src = os.path.join(datapath, mat_file)
+    
+    if not os.path.exists(src):
+        data_url = "http://ufldl.stanford.edu/housenumbers/" + mat_file
+        
+        tf.keras.utils.get_file(origin=data_url, fname=src, untar=True)
+        
     data = loadmat(src)
     
     return data['X'], data['y']
